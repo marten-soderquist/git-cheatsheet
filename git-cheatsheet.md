@@ -26,11 +26,7 @@ There are two main ways to get started, either cloning an existing repository or
 
 ### Cloning an existing repository
 
-<<<<<<< HEAD
-Use the command `git clone <link to repository>` to clone the contents of that repository to your computer to a new folder below your current one. For example, to clone the repository `another-repo` use: `git clone another-repo`\
-=======
-Use the command `git clone <link to repository>` to clone the contents of that repository to your computer to a new folder below your current one. For example, to clone the repository `another-repo` use:\ `git clone another-repo`\
->>>>>>> e89a11f44be9d0d424b5e1298474dfdda6113c31
+Use the command `git clone <link to repository>` to clone the contents of that repository to your computer to a new folder below your current one. For example, to clone the repository `another-repo` use `git clone another-repo`\
 This will download the remote repository into the folder `<your-current-location>/another-repo`\
 This also automatically sets up the remote repository as a remote. 
 
