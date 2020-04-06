@@ -47,7 +47,7 @@ Some files created in a repository you will typically not want to be visible to 
 
 ### Check status and view logs
 
-Check the curren status of your working branch with `git status`. This will show which files have changed.
+Check the curren status of your working branch with `git status`. This will show files that have changed.
 
 View the history with `git log`.
 
@@ -58,9 +58,12 @@ To create a new branch and switch to it use `git checkout -b <new branch name>`
 
 To see what branches you have use `git branch`.
 
+Switch to an existing branch with `git checkout <branch name>`
+
 ### View changes
 
-To view what changes have been made to a file use the command:\
+To view what changes have been made to a file use the command:
+
 `git diff <filename>`
 
 ### Commiting changes
@@ -69,18 +72,39 @@ Commiting changes is a two step process. First stage (add) the changed files you
 
 `git add <file1> <file2> ...`  (or `git add .` to add all changed files.)
 
+Once you are happy with which files are going to be commited (check with `git status`) initiate the commit with `git commit`. This will open a text editor. Which editor can be configured, see [here](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration) for details. Alternatively you can use the option `-m` to specify the commit message on the command line, e.g. `git commit -m "Simple fix"`.
+
 #### Commit philosophy
 
 - Keep commits small
-  * If you have several files that have changed but the changes are not related to each other then split then make several commits. 
+  * If you have several files that have changed but the changes **are not related** to each other then make several commits. 
 - Leave a relevant commit message
   * This makes changes easier to find later.
 
-
 ---
-## Terminology
+
+## Merging changes
+
+When you have made changes that need to be included in another branch you need to merge them. 
+1. Switch to the other, i.e. the branch on which the changes need to be applied. Example, switch from the `<branch-with-changes>` were you have been working.
+
+> `$ git checkout <other-branch>`\
+> `Switched to branch <other-branch>`
+
+2. Apply changes on the `<other-branch>`, which is now the branch you are on.
+> `$ git merge <branch-with-changes>`
+
+3. If all went well Git will apply the changes and do a fast-forward. If not you have merge conflict and need to manually edit these files. 
+
+More in-depth information can be found [here](https://git-scm.com/docs/git-merge)
 
 
+## Remote repositories
+
+To update your repository and download remote changes to your computer use `git fetch`. Do not confuse this with the command `git pull`, which **downloads changes and merges them into your current branch**.
+
+View the list of remote repos with `git remote` or `git remote -v` for more details (such as the remote location).
+You can manage remotes (add, remove, rename etc) as well. See [here](https://git-scm.com/docs/git-remote) for more.
 
 
 
