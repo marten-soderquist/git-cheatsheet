@@ -56,11 +56,26 @@ Always do work on a separate branch. This keeps your work separate from others.
 
 To create a new branch and switch to it use `git checkout -b <new branch name>`
 
-To see what branches you have use `git branch`
+To see what branches you have use `git branch`.
+
+### View changes
+
+To view what changes have been made to a file use the command:\
+`git diff <filename>`
 
 ### Commiting changes
 
-Commiting changes is a two step process. First add the changed files you want to include in your commit.
+Commiting changes is a two step process. First stage (add) the changed files you want to include in your commit.
+
+`git add <file1> <file2> ...`  (or `git add .` to add all changed files.)
+
+#### Commit philosophy
+
+- Keep commits small
+  * If you have several files that have changed but the changes are not related to each other then split then make several commits. 
+- Leave a relevant commit message
+  * This makes changes easier to find later.
+
 
 ---
 ## Terminology
