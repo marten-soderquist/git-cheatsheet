@@ -47,7 +47,7 @@ Some files created in a repository you will typically not want to be visible to 
 
 ### Check status and view logs
 
-Check the curren status of your working branch with `git status`. This will show files that have changed.
+Check the current status of your working branch with `git status`. This will show files that have changed.
 
 View the history with `git log`.
 
