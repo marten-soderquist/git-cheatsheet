@@ -54,7 +54,7 @@ View the history with `git log`.
 ### Branches
 Always do work on a separate branch. This keeps your work separate from others.
 
-To create a new branch and swithc to it use `git checkout -b <new branch name>`
+To create a new branch and switch to it use `git checkout -b <new branch name>`
 
 To see what branches you have use `git branch`
 
